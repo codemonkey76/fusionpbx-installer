@@ -4,7 +4,7 @@ A quick install guide & scripts for installing FusionPBX. It is recommended to s
 
 ## Installation
 ```sh
-wget -O - https://raw.githubusercontent.com/codemonkey76/fusionpbx-install.sh/master/pre-install.sh | sh;
+wget -O - https://raw.githubusercontent.com/codemonkey76/fusionpbx-installer/main/pre-install.sh | sh;
 cd /usr/src/fusionpbx-install.sh/ubuntu && ./install.sh
 ```
 

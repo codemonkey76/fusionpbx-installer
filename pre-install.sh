@@ -7,7 +7,7 @@ apt-get update && apt-get upgrade -y
 apt-get install -y git
 
 # Get the install script
-cd /usr/src && git clone https://github.com/codemonkey76/fusionpbx-install.sh.git
+cd /usr/src && git clone https://github.com/codemonkey76/fusionpbx-installer
 
 # Change the working directory
-cd /usr/src/fusionpbx-install.sh
+cd /usr/src/fusionpbx-installer

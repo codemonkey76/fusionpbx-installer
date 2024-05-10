@@ -12,7 +12,7 @@ verbose "Configuring PHP"
 
 # Add the PHP repository
 apt-get install -y software-properties-common ca-certificates lsb-release apt-transport-https
-LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y
+LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/nginx-mainline -y
 apt-get update -y
 
 # Install dependencies

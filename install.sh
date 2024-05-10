@@ -17,13 +17,13 @@ apt-get install -y ca-certificates
 apt-get install -y dialog
 apt-get install -y nano
 
-#SNMP
+# SNMP
 apt-get install -y snmpd
 mkdir -p /etc/snmp/snmpd.conf.d
 echo "rocommunity public" > /etc/snmp/snmpd.conf.d/rocommunity.conf
 service snmpd restart
 
-#IP Tables
+# IP Tables
 resources/iptables.sh
 
 # SNGrep
@@ -32,23 +32,23 @@ resources/sngrep.sh
 # FusionPBX
 resources/fusionpbx.sh
 
-#PHP
+# PHP
 resources/php.sh
 
-#Nginx Web Server
+# Nginx Web Server
 resources/nginx.sh
 
-#Postgresql
+# Postgresql
 resources/postgresql.sh
 
-#Freeswitch
+# Freeswitch
 resources/switch.sh
 
-#Fail2ban
+# Fail2ban
 resources/fail2ban.sh
 
-#Set the IP address
+# Set the IP address
 server_address=$(hostname -I)
 
-#Add the database schema, users and groups
+# Add the database schema, users and groups
 resources/finish.sh

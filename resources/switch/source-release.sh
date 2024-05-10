@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 . ../config.sh
 
 # Upgrade packages
-apt update && apt upgrade-y
+apt update && apt upgrade -y
 
 # Install dependencies
 apt install -y autoconf automake devscripts g++ git-core libncurses5-dev libtool make libjpeg-dev \
@@ -16,7 +16,7 @@ apt install -y autoconf automake devscripts g++ git-core libncurses5-dev libtool
   devscripts libspeexdsp-dev libspeex-dev libldns-dev libedit-dev libopus-dev libmemcached-dev \
   libshout3-dev libmpg123-dev libmp3lame-dev yasm nasm libsndfile1-dev libuv1-dev libvpx-dev \
   libavformat-dev libswscale-dev libspandsp-dev pip libpq-dev libvlc-dev uuid-dev sox libsox-fmt-all
-
+exit
 # additional dependencies
 apt install -y swig3.0 unzip sox wget
 

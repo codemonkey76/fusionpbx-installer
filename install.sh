@@ -19,8 +19,9 @@ apt-get install -y nano
 
 #SNMP
 apt-get install -y snmpd
-echo "rocommunitiy public" >> /etc/snmp/snmpd.conf
-service snmp restart
+mkdir -p /etc/snmp/snmpd.conf.d
+echo "rocommunity public" > /etc/snmp/snmpd.conf.d/rocommunity.conf
+service snmpd restart
 
 #IP Tables
 resources/iptables.sh

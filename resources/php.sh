@@ -12,8 +12,8 @@ verbose "Configuring PHP"
 
 # Add the PHP repository
 apt-get install -y software-properties-common ca-certificates lsb-release apt-transport-https
-LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php 
+LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y
 apt-get update -y
 
 # Install dependencies
-apt-get install -y php php-cli php-fpm php-pgsql php-sqlite3 php-oodbc php-curl php-imap php-xml php-gd php-mbstring
+apt-get install -y php php-cli php-fpm php-pgsql php-sqlite3 php-odbc php-curl php-imap php-xml php-gd php-mbstring

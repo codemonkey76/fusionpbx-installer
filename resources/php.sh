@@ -10,10 +10,5 @@ cd "$(dirname "$0")"
 # Send a message
 verbose "Configuring PHP"
 
-# Add the PHP repository
-apt-get install -y software-properties-common ca-certificates lsb-release apt-transport-https
-LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/nginx-mainline -y
-apt-get update -y
-
 # Install dependencies
-apt-get install -y php php-cli php-fpm php-pgsql php-sqlite3 php-odbc php-curl php-imap php-xml php-gd php-mbstring
+apt-get install -y php8.3 php8.3-cli php8.3-fpm php8.3-pgsql php8.3-sqlite3 php8.3-odbc php8.3-curl php8.3-imap php8.3-xml php8.3-gd php8.3-mbstring

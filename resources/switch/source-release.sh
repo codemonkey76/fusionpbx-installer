@@ -47,21 +47,10 @@ ldconfig
 
 echo "Using version $switch_version"
 cd /usr/src
-#git clone -b v1.8 https://freeswitch.org/stash/scm/fs/freeswitch.git /usr/src/freeswitch
-#1.8 and older
-#wget http://files.freeswitch.org/freeswitch-releases/freeswitch-$switch_version.zip
-#unzip freeswitch-$switch_version.zip
-#rm -R freeswitch
-#mv freeswitch-$switch_version freeswitch
-#cd /usr/src/freeswitch
-#1.10.0 and newer
 wget http://files.freeswitch.org/freeswitch-releases/freeswitch-$switch_version.-release.zip -O freeswitch-$switch_version.-release.zip
 unzip freeswitch-$switch_version.-release.zip
 mv freeswitch-$switch_version.-release freeswitch-$switch_version
 cd /usr/src/freeswitch-$switch_version
-
-# bootstrap is needed if using git
-#./bootstrap.sh -j
 
 # enable required modules
 sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'#applications/mod_callcenter:applications/mod_callcenter:'
@@ -71,13 +60,11 @@ sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'#applications/mod_
 sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'#formats/mod_shout:formats/mod_shout:'
 sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'#formats/mod_pgsql:formats/mod_pgsql:'
 sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'endpoints/mod_verto:#endpoints/mod_verto:'
-#sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'#applications/mod_avmd:applications/mod_avmd:'
 
 #disable module or install dependency libks to compile signalwire
 sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'applications/mod_signalwire:#applications/mod_signalwire:'
 
 # prepare the build
-#./configure --prefix=/usr/local/freeswitch --enable-core-pgsql-support --disable-fhs
 ./configure -C --enable-portable-binary --disable-dependency-tracking \
 --prefix=/usr --localstatedir=/var --sysconfdir=/etc \
 --with-openssl --enable-core-pgsql-support

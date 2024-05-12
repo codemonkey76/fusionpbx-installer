@@ -43,7 +43,7 @@ resources/postgresql.sh
 
 # Freeswitch
 resources/switch.sh
-
+exit
 # Fail2ban
 resources/fail2ban.sh
 

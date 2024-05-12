@@ -10,7 +10,7 @@ cd "$(dirname "$0")"
 # Send a message
 verbose "Configuring NGINX"
 
-apt-get install -y nginx
+apt-get install -y ssl-cert nginx
 cp nginx/fusionpbx /etc/nginx/sites-available/fusionpbx
 ln -s /etc/nginx/sites-available/fusionpbx /etc/nginx/sites-enabled/fusionpbx
 

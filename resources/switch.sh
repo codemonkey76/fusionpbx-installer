@@ -7,6 +7,7 @@ cd "$(dirname "$0")"
 . ./config.sh
 
 switch/source-release.sh
+exit
 switch/source-sounds.sh
 switch/conf-copy.sh
 switch/package-permissions.sh

@@ -52,7 +52,7 @@ export CXX=g++-9
 wget https://ffmpeg.org/releases/ffmpeg-5.1.tar.bz2
 tar xvjf ffmpeg-5.1.tar.bz2
 cd ffmpeg-5.1
-./configure --prefix=/usr/local --enable-gpl --enable-version3 --enable-nonfree --enable-shared --enable-libx264 --enable-libx265 --enable-libvpx --enable-libfdk-aac
+./configure --disable-asm --prefix=/usr/local --enable-gpl --enable-version3 --enable-nonfree --enable-shared --enable-libx264 --enable-libx265 --enable-libvpx --enable-libfdk-aac
 make -j$(nproc)  # Compile using all available cores
 sudo make install
 unset CC

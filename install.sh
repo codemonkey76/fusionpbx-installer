@@ -8,6 +8,9 @@ cd "$(dirname "$0")"
 . ./resources/colors.sh
 . ./resources/environment.sh
 
+# Set timezone
+timedatectl set-timezone $timezone
+
 # Add dependencies
 apt-get install -y wget
 apt-get install -y lsb-release

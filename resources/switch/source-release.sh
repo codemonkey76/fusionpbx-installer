@@ -57,7 +57,6 @@ make -j$(nproc)  # Compile using all available cores
 make install
 unset CC
 unset CXX
-exit
 
 echo "Using version $switch_version"
 cd /usr/src

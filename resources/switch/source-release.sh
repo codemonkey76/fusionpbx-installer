@@ -54,9 +54,10 @@ tar xvjf ffmpeg-5.1.tar.bz2
 cd ffmpeg-5.1
 ./configure --disable-asm --prefix=/usr/local --enable-gpl --enable-version3 --enable-nonfree --enable-shared --enable-libx264 --enable-libx265 --enable-libvpx --enable-libfdk-aac
 make -j$(nproc)  # Compile using all available cores
-sudo make install
+make install
 unset CC
 unset CXX
+exit
 
 echo "Using version $switch_version"
 cd /usr/src

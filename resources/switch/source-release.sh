@@ -47,16 +47,16 @@ ldconfig
 # FFMPEG 5.1 latest won't work currently.
 cd /usr/src
 apt install -y libfdk-aac-dev libx265-dev gcc-9 g++-9
-CC=gcc-9
-CXX=g++-9
+export CC=gcc-9
+export CXX=g++-9
 wget https://ffmpeg.org/releases/ffmpeg-5.1.tar.bz2
 tar xvjf ffmpeg-5.1.tar.bz2
 cd ffmpeg-5.1
 ./configure --prefix=/usr/local --enable-gpl --enable-version3 --enable-nonfree --enable-shared --enable-libx264 --enable-libx265 --enable-libvpx --enable-libfdk-aac
 make -j$(nproc)  # Compile using all available cores
 sudo make install
-CC=
-CXX=
+unset CC
+unset CXX
 
 echo "Using version $switch_version"
 cd /usr/src

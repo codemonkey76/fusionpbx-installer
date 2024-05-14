@@ -10,5 +10,6 @@ cd "$(dirname "$0")"
 verbose "Configuring FusionPBX Theme"
 rm -rf /var/www/fusionpbx/themes/default
 git clone https://github.com/codemonkey76/fusionpbx-theme-asg.git /var/www/fusionpbx/themes/default
+chown www-data:www-data -R /var/www/futionpbx/themes/default
 
 

@@ -1,7 +1,7 @@
 
 # FusionPBX Settings
 domain_name=ip_address          # hostname, ip_address or a custom value
-system_username=ubuntu          # default username ubuntu
+system_username=alpha          # default username ubuntu
 system_password=random          # random or a custom value
 system_branch=5.2               # master, 5.2
 

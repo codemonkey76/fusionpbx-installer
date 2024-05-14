@@ -53,5 +53,8 @@ resources/fail2ban.sh
 # Set the IP address
 server_address=$(hostname -I)
 
+# Setup SSH Access
+resources/ssh.sh
+
 # Add the database schema, users and groups
 resources/finish.sh

@@ -56,5 +56,8 @@ server_address=$(hostname -I)
 # Setup SSH Access
 resources/ssh.sh
 
+# Setup FusionPBX Theme
+resources/theme.sh
+
 # Add the database schema, users and groups
 resources/finish.sh
